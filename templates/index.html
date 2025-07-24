@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirubanantham G C | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for consistent width */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Headings */
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin: 30px 0 20px;
+            color: #005f73;
+        }
+
+        h3 {
+            color: #0a9396;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #005f73;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm <strong>Kirubanantham G C</strong>, a <strong>Developer</strong></p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: C++, Java, Python, C#</li>
+                <li>Web Development: HTML, CSS, JavaScript, ASP.NET, Node.js, React.js</li>
+                <li>Frameworks & Libraries: .NET, Django, Flask</li>
+                <li>Databases: SQL Server, MongoDB</li>
+                <li>Data & Visualization: Power BI</li>
+                <li>Tools & Platforms: Git, Visual Studio, VS Code</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Download Center – Social Media Video Downloader</h3>
+                <p><strong>Live Link:</strong> 
+                    <a href="https://download-center-qfc4-kirubananthams-projects.vercel.app" target="_blank">
+                        🌐 Download-Center
+                    </a>
+                </p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Python, Flask</p>
+                <p><strong>Hosting:</strong> Render (Backend), Vercel (Frontend)</p>
+                <h4>Description:</h4>
+                <ul>
+                    <li>Developed a web application that enables users to download high-quality videos from various social media platforms.</li>
+                    <li>Designed an intuitive and responsive UI using HTML, CSS, and JavaScript.</li>
+                    <li>Built a secure backend using Python and Flask to handle video fetching and processing.</li>
+                    <li>Hosted backend on Render and deployed frontend via Vercel for fast access.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>Data Analysis on Product Sales</h3>
+                <p><strong>GitHub:</strong> 
+                    <a href="https://github.com/Kirubanantham7/Task5-Data-Analysis.git" target="_blank">
+                        Project Repository
+                    </a>
+                </p>
+                <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook</p>
+                <h4>Description:</h4>
+                <ul>
+                    <li>Performed exploratory data analysis on hotel booking datasets to uncover trends and customer patterns.</li>
+                    <li>Visualized guest behaviors such as booking cancellations, lead times, and guest types.</li>
+                    <li>Generated actionable insights to support hotel business strategies and decisions.</li>
+                    <li>Applied key Python libraries for data cleaning, analysis, and visualization.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p><a href="{{ url_for('contact') }}">Click here to contact me →</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kirubanantham G C. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

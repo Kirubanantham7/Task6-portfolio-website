@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Kirubanantham G C</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Section Headings */
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin: 30px 0 20px;
+            color: #005f73;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #0a9396;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007f86;
+        }
+
+        a {
+            color: #005f73;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Contact Me</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Get in Touch</h2>
+            {% if success %}
+                <p style="color: green;">Thanks for your message! I'll get back to you soon.</p>
+            {% endif %}
+            <form method="POST">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
+
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Home</h2>
+            <p><a href="{{ url_for('home') }}">← Back to Home</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Kirubanantham G C. All rights reserved.
+    </footer>
+</body>
+</html>
