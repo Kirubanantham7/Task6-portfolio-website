@@ -91,6 +91,6 @@ This project is open-source and free to use.
 🙋‍♂️ Author
 -----------
 **Kirubanantham G C**  
-Connect on [LinkedIn]([https://www.linkedin.com/](http://www.linkedin.com/in/kiruba-nantham-g-c-556a51279)) |
+
 
 ---
